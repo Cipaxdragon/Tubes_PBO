@@ -41,6 +41,7 @@
 > 0- A1, A2, B1, B2
 > 1- ada history (koordinat/lokasi yang sudah terpakai)
 
-
+## Status Tugas
+       { Masih Sebatas sampai bisa buat 2 player }
 
 
