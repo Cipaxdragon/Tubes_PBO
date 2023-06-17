@@ -4,9 +4,9 @@
 ### Kelompok 4B
 | Nama | NIM |
 |--|--|
-| Aprisal| 60900121080 | 
+| Aprisal| 60900121081 | 
 | Muh Afdal | 609001210 | 609001210 |
-| Dicky Sukrysno | 609001210|
+| Dicky Sukrysno | 60900121052|
 | [Ahmad Ghazali](github.com/cipaxdragon) | 60900121064  |
 
 
