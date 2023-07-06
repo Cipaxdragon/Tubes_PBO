@@ -1,47 +1,43 @@
-# Tubes PBO
-![Deskripsi Gif](https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif)
+# Tugas Besar PBO kelompok 4b
+## Develop : 
 
-### Kelompok 4B
-| Nama | NIM |
+| Pekerja | NIM |
 |--|--|
-| Aprisal| 60900121081 | 
-| Muh Afdal | 609001210 | 609001210 |
-| Dicky Sukrysno | 60900121052|
-| [Ahmad Ghazali](github.com/cipaxdragon) | 60900121064  |
+|Ahmad Ghazali| 60900121064 |
+|Ahmad Ghazali| Penanggung Jawab |
+|Ahmad Ghazali| Penanggung Jawab |
+|Ahmad Ghazali| Penanggung Jawab |
 
 
-## Soal
 
-> 1. luas map minimal 49 kordinat
-> 2. permainan dilakukan dengan 2 player dan permainan harus dapat berakhir.
-> 3. nama playernya siapa, contohnya nama negara.
-> 4. tidak boleh ada eror ketika dijalankan
-> 5. semua kordinat hrs bisa digunakan 
-> 6. dari 5 pilar OOP abstraction, encapsulation, polimorfisme, inheritance, interface: menerapkan min 3. 
-> ---Contoh kreasi fitur Opsional
-> 7. 1 kali menembak 2 titik
-> 8. bebas buat ronde, kalo seri bisa ditambah rondenya
-> 
-> Capaian Program :
-> A. Capaian Minimal:
-> 1- Saling menembak tiap turn, dan hasil nya tersimpan.
-> 2- Kalo menang-kalah tercapai, game selesai, kalau belum ya lanjut.
-> 
-> B.Capaian 2
-> 0- A1 & A2
-> 1- A1 + kreasi hasil:
->   //asumsi-asumsi:
->   target/lokasi sudah ditembakkan "posisi sudah digunakan",
->   target tidak ditemukan "Sori Chou, nda kena bro".
->   target berhasil,"target bommed",
->   target kapal teman,"kapal teman terbom"
-> 2- A1 + ada keterangan sisa kapal bertahan.
-> 
-> C. Capaian 3
-> 0- A1, A2, B1, B2
-> 1- ada history (koordinat/lokasi yang sudah terpakai)
+## Panduan Bermain Game
+- Setiap pemain diberikan papan permainan berukuran 50x50 (Mainkan game ini di full screen window cmd nah).
+Kapal pemain akan ditempatkan secara acak pada papan permainan.
+- Setiap sel pada papan permainan dapat memiliki status berikut:
 
-## Status Tugas
-       Masih Sebatas sampai bisa buat 2 player 
+```
+"_" (garis bawah): Tidak memiliki makna khusus, digunakan sebagai pemisah atau pemformatan.
+"S": Menandakan adanya kapal pada sel tersebut.
+"X": Menandakan bahwa sel tersebut telah ditembak dan mengenai kapal.
+"O": Menandakan bahwa sel tersebut telah ditembak tetapi tidak mengenai kapal.
+```
+- Pemain bergantian untuk menebak koordinat tembakan di papan lawan.
+- Jika tembakan mengenai kapal lawan, maka pemain tersebut mencetak poin.
+- Jika tembakan tidak mengenai kapal lawan, maka giliran pemain berikutnya.
+- Permainan berlanjut hingga salah satu pemain berhasil menenggelamkan semua kapal lawan.
+Pemain yang berhasil menenggelamkan semua kapal lawan menjadi pemenangnya.
 
 
+## Implementasi #1
+
+1. Abstraksi: Konsep abstraksi digunakan dalam kodingan ini dengan menggunakan class `BattleshipGame` untuk merepresentasikan permainan Battleship. Class ini mengabstraksi semua detail permainan, termasuk papan permainan, penempatan kapal, giliran pemain, dan logika permainan.
+
+2. Enkapsulasi: Konsep enkapsulasi diterapkan dalam kodingan ini dengan mengenkapsulasi data anggota private seperti `boardPlayer1`, `boardPlayer2`, `numShips`, `player1`, `player2`, `country1`, `country2`, dan `isPlayer1Turn`. Data anggota ini hanya dapat diakses dan dimodifikasi melalui metode-metode publik yang ditentukan dalam class `BattleshipGame`.
+
+3. Polimorfisme: Kodingan ini tidak secara eksplisit menggunakan polimorfisme. Polimorfisme umumnya melibatkan penggunaan pewarisan dan penggunaan metode yang dioverride atau overloaded. Kodingan ini menggunakan pewarisan melalui penulisan class `BattleshipGame` yang menjadi superclass dari class `Main`, tetapi tidak ada penggunaan metode yang dioverride atau overloaded.
+
+4. Pewarisan: Konsep pewarisan diterapkan dalam kodingan ini dengan membuat class `BattleshipGame` sebagai superclass dan class `Main` sebagai subclass-nya. Class `Main` mewarisi semua anggota (termasuk variabel dan metode) dari class `BattleshipGame`. Pewarisan memungkinkan subclass untuk memperluas atau mengubah perilaku yang diwarisi dari superclass.
+
+5. Interface: Kodingan ini tidak mengimplementasikan interface secara langsung. Interface biasanya digunakan untuk mendefinisikan kontrak metode yang harus diimplementasikan oleh class-class yang mengimplementasikan interface tersebut. Dalam kodingan ini, tidak ada penggunaan interface secara eksplisit.
+
+Jadi, kodingan ini mengimplementasikan beberapa konsep pemrograman berorientasi objek, termasuk abstraksi, enkapsulasi, dan pewarisan, tetapi tidak menggunakan polimorfisme dan interface secara langsung.
