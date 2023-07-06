@@ -1,13 +1,13 @@
 # Tugas Besar PBO kelompok 4b
-## Develop : 
+## Nama Kelompok : 
 
 | Pekerja | NIM |
 |--|--|
-|Ahmad Ghazali| 60900121064 |
-|Ahmad Ghazali| Penanggung Jawab |
-|Ahmad Ghazali| Penanggung Jawab |
-|Ahmad Ghazali| Penanggung Jawab |
-
+|AHMAD GHAZALI | 60900121064 |
+|DIKCY SUKKRYSNO| 60900121052 |
+|ADAM ABDUL MAJID F| 60900121033 |
+|APRISAL| 60900121080 |
+|MUH AFDAL|60900121017|
 
 
 ## Panduan Bermain Game
@@ -27,6 +27,57 @@ Kapal pemain akan ditempatkan secara acak pada papan permainan.
 - Permainan berlanjut hingga salah satu pemain berhasil menenggelamkan semua kapal lawan.
 Pemain yang berhasil menenggelamkan semua kapal lawan menjadi pemenangnya.
 
+## Penjelasan Kode
+
+implementasi dari permainan Battleship dalam bahasa pemrograman Java. Battleship adalah permainan strategi untuk dua pemain yang bertujuan untuk menenggelamkan kapal lawan.
+
+Kelas `BattleshipGame` merupakan kelas utama yang mengatur jalannya permainan. Berikut adalah penjelasan singkat tentang beberapa metode dan variabel dalam kelas ini:
+
+1. Variabel:
+   - `boardSize`: Ukuran papan permainan, dalam hal ini 50x50.
+   - `emptyCell`: Karakter yang mewakili sel kosong pada papan.
+   - `shipCell`: Karakter yang mewakili sel yang berisi kapal.
+   - `hitCell`: Karakter yang mewakili sel yang telah ditembak dan mengenai kapal.
+   - `missCell`: Karakter yang mewakili sel yang telah ditembak tetapi tidak mengenai kapal.
+   - `boardPlayer1`: Papan permainan untuk pemain 1.
+   - `boardPlayer2`: Papan permainan untuk pemain 2.
+   - `numShips`: Jumlah kapal yang akan ditempatkan di papan.
+   - `player1`: Nama pemain 1.
+   - `player2`: Nama pemain 2.
+   - `country1`: Negara pemain 1.
+   - `country2`: Negara pemain 2.
+   - `isPlayer1Turn`: Menandakan giliran pemain 1. Jika `true`, maka giliran pemain 1; jika `false`, maka giliran pemain 2.
+
+2. Konstruktor `BattleshipGame`:
+   - Menerima argumen jumlah kapal, nama pemain, dan negara pemain.
+   - Menginisialisasi variabel-variabel dan papan permainan.
+
+3. Metode `placeShips`:
+   - Menempatkan kapal-kapal secara acak di papan permainan untuk pemain 1 dan pemain 2.
+   - Jumlah kapal yang ditempatkan sesuai dengan `numShips`.
+
+4. Metode `playGame`:
+   - Mengatur jalannya permainan.
+   - Pemain secara bergantian menebak koordinat tembakan pada papan lawan.
+   - Memeriksa hasil tembakan (apakah mengenai kapal atau tidak) dan mengupdate papan permainan.
+   - Permainan berlanjut hingga salah satu pemain berhasil menenggelamkan semua kapal lawan.
+
+5. Metode `printBoard`:
+   - Mencetak papan permainan untuk pemain 1 dan pemain 2.
+
+Kelas `Main` merupakan kelas yang berisi metode `main` yang menjadi titik masuk program. Di dalam metode `main`, terdapat implementasi logika menu dan pemilihan opsi untuk memulai permainan atau menampilkan informasi tentang permainan Battleship.
+
+Metode `displayGuide` dan `displayAbout` digunakan untuk menampilkan panduan permainan dan informasi tentang permainan Battleship kepada pengguna.
+
+Saat program dijalankan, pengguna akan disambut dengan menu utama dan diminta untuk memilih opsi yang diinginkan. Jika pengguna memilih untuk memulai permainan, maka akan diminta untuk memasukkan nama pemain dan negara pemain. Setelah itu
+
+akan dibuat objek `BattleshipGame` dengan parameter yang sesuai dan permainan akan dimulai dengan pemanggilan metode `placeShips` dan `playGame`.
+
+Selama permainan berlangsung, pemain akan diminta untuk memasukkan koordinat tembakan secara bergantian. Hasil tembakan akan diperiksa dan papan permainan akan diperbarui. Permainan akan berlanjut hingga salah satu pemain berhasil menenggelamkan semua kapal lawan.
+
+Setelah permainan selesai, akan ditampilkan pesan dengan menyebutkan pemenangnya dan jumlah total percobaan yang dilakukan.
+
+Itulah penjelasan singkat mengenai koding di atas yang mengimplementasikan permainan Battleship dalam bahasa pemrograman Java.
 
 ## Implementasi #1
 
