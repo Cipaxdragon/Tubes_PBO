@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+
+
 class BattleshipGame {
     private final int boardSize = 50;
     private final char emptyCell = '-';
